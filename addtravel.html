@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add a Travel Offer</title>
+</head>
+<body align="center">
+
+    <h1>Add a Travel Offer</h1>
+
+    <form action="/submit_offer" method="POST">
+        <!-- Title Field -->
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required minlength="3" placeholder="Enter the title of the offer"><br><br>
+
+        <!-- Destination Field -->
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required pattern="[A-Za-z\s]{3,}" placeholder="Enter destination"><br><br>
+
+        <!-- Departure Date Field -->
+        <label for="departure_date">Departure Date:</label>
+        <input type="date" id="departure_date" name="departure_date" required><br><br>
+
+        <!-- Return Date Field -->
+        <label for="return_date">Return Date:</label>
+        <input type="date" id="return_date" name="return_date" required><br><br>
+
+        <!-- Price Field -->
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required min="0.01" step="0.01" placeholder="Price"><br><br>
+
+        <!-- Availability Field -->
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability">
+            <option value="available">Available</option>
+            <option value="unavailable">Unavailable</option>
+        </select><br><br>
+
+        <!-- Category Field -->
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+            <option value="adventure">Adventure</option>
+            <option value="beach">Beach</option>
+            <option value="romantic">Romantic</option>
+            <option value="family">Family</option>
+            <option value="luxury">Luxury</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Add Offer</button>
+    </form>
+
+</body>
+</html>
